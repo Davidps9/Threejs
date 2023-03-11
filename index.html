@@ -30,7 +30,7 @@
             loader.load( './donut.glb', function ( gltf ) {
 
                 scene.add( gltf.scene );
-                
+                gltf.scale(10,10,10);
 
             }, undefined, function ( error ) {
 
