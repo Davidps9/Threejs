@@ -36,15 +36,16 @@
                 console.error( error );
 
             } );
-            camera.position.z = 10;
-            function animate(){
-                requestAnimationFrame(animate);
-                sphere.rotation.x+=0.01;
-                sphere.rotation.y+=0.01;
-                renderer.render(scene,camera);
+            camera.position.z = 1;
+            camera.position.y = -2;
+            // function animate(){
+            //     requestAnimationFrame(animate);
+            //     sphere.rotation.x+=0.01;
+            //     sphere.rotation.y+=0.01;
+            //     renderer.render(scene,camera);
 
-            }
-            animate();
+            // }
+            // animate();
 		</script>
 </body>
 </html>
