@@ -11,7 +11,8 @@
 			import * as THREE from 'https://unpkg.com/three/build/three.module.js';
             //import * as THREE from 'https://davidps9.github.io/Threejs/Three.js';
 
-            //import {GLTFLoader} from 'https://davidps9.github.io/Threejs/GLTFLoader.js';
+            import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js';
+
 
 			// Our Javascript will go here.
             const scene = new THREE.Scene();
@@ -24,17 +25,17 @@
             const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 ,wireframe: true} );
             const sphere = new THREE.Mesh( geometry, material );
             scene.add( sphere );
-            // const loader = new GLTFLoader();
+            const loader = new GLTFLoader();
 
-            // loader.load( './donut.glb', function ( gltf ) {
+            loader.load( './donut.glb', function ( gltf ) {
 
-            //     scene.add( gltf.scene );
+                scene.add( gltf.scene );
 
-            // }, undefined, function ( error ) {
+            }, undefined, function ( error ) {
 
-            //     console.error( error );
+                console.error( error );
 
-            // } );
+            } );
             camera.position.z = 10;
             function animate(){
                 requestAnimationFrame(animate);
