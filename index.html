@@ -30,15 +30,15 @@
             loader.load( './donut.glb', function ( gltf ) {
 
                 scene.add( gltf.scene );
-                gltf.scale(10,10,10);
+                
 
             }, undefined, function ( error ) {
 
                 console.error( error );
 
             } );
-            camera.position.z = 1;
-            camera.position.y = -2;
+            camera.position.z = 2;
+            camera.position.y = 0.1;
             // function animate(){
             //     requestAnimationFrame(animate);
             //     sphere.rotation.x+=0.01;
