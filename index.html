@@ -28,13 +28,12 @@
             const scene = new THREE.Scene();
             const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
-            const light = new THREE.PointLight( 0xff0000, 1, 100 );
-            light.position.set( 0, 0.50, 2 );
-            scene.add( light );   
+            // const light = new THREE.PointLight( 0xff0000, 1, 100 );
+            // light.position.set( 0, 0.50, 2 );
+            // scene.add( light );   
             
-            const light2 = new THREE.PointLight( 0xff0000, 100,1, 100 );
-light2.position.set( 50, 10, 0 );
-scene.add( light2 );
+            const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+scene.add( light );
             
             const renderer = new THREE.WebGLRenderer();
             renderer.setSize( window.innerWidth, window.innerHeight );
