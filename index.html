@@ -82,14 +82,13 @@
             
             function animate(){
                 requestAnimationFrame(animate);
-                camera.lookAt(0,0,0);
+                //camera.lookAt(0,0,0);
                 target.x = ( 1 - mouse.x ) * 0.002;
                 target.y = ( 1 - mouse.y ) * 0.005;
                 camera.rotation.x += 0.005 * ( target.y - camera.rotation.x );
                 camera.rotation.y += 0.005 * ( target.x - camera.rotation.y );
                 
                  renderer.render(scene,camera);
-                console.log(camera.rotation.x);
             }
 
             animate();
