@@ -53,11 +53,11 @@
 
             const loader = new GLTFLoader();
 
-            loader.load( 'Models/donut.glb', function ( gltf ) {
+            loader.load( 'Models/donut2.glb', function ( gltf ) {
 
 
                 gltf.scene.scale.set(30,30,30);
-                gltf.asset.position.set(0,0,0);
+                gltf.scene.position.set(0,0,0);
                 scene.add( gltf.scene );
                 console.log(gltf.scene.position);
                 
