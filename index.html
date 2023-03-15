@@ -51,18 +51,18 @@
             scene.add( sphere );
             }
 
-            // const loader = new GLTFLoader();
+            const loader = new GLTFLoader();
 
-            // loader.load( './donut.glb', function ( gltf ) {
+            loader.load( './donut.glb', function ( gltf ) {
 
-            //     scene.add( gltf.scene );
+                scene.add( gltf.asset );
                 
 
-            // }, undefined, function ( error ) {
+            }, undefined, function ( error ) {
 
-            //     console.error( error );
+                console.error( error );
 
-            // } );ç  
+            } );
      
                 camera.position.x = 0;
                 camera.position.y = 0;
